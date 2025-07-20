@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,18 +19,22 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
     h1, h2 {
       color: #1e90ff;
     }
-    hr {
-      border: 0;
-      height: 1px;
-      background: #ddd;
-      margin: 20px 0;
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #1e90ff;
     }
     .section {
-      margin-bottom: 30px;
+      margin: 40px 0;
+      text-align: left;
     }
     .contact p, .skills span {
       margin: 5px 0;
@@ -46,61 +50,100 @@
       color: #1e90ff;
       text-decoration: none;
     }
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1e90ff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .download-btn:hover {
+      background: #0f78d1;
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <img src="soumen-profile.jpg" alt="Soumen Das" class="profile-pic" />
     <h1>Soumen Das</h1>
-    <p><strong>Accounts Executive | TDS, GST, and ITR Specialist</strong></p>
+    <p><strong>Senior Accounts Executive | TDS, GST, Financial Statements</strong></p>
+
+    <a href="Soumen-Das-cv-16.07.25.pdf" class="download-btn" download>📄 Download Resume (PDF)</a>
 
     <div class="section contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:soumen@example.com">soumen@example.com</a></p>
-      <p>Phone: +91-XXXXXXXXXX</p>
-      <p>Location: Kolkata, India</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/soumen-das" target="_blank">linkedin.com/in/soumen-das</a></p>
+      <p>Email: <a href="mailto:dsoumen65@protonmail.com">dsoumen65@protonmail.com</a></p>
+      <p>Phone: +91-63427973</p>
+      <p>Address: 7B, Gandhinagar, Sodepur, Kolkata - 700114</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/soumen-das-7638a9266/" target="_blank">linkedin.com/in/soumen-das</a></p>
     </div>
 
     <div class="section">
       <h2>Summary</h2>
-      <p>Dedicated accounting professional with hands-on experience in TDS filing, GST returns, and financial reconciliation. Currently working at ATO India Ltd and seeking to grow in a structured, learning-oriented organization.</p>
+      <p>Senior Accounts Executive with 3+ years of experience in TDS & GST compliance, financial reporting, and bank reconciliation. Proficient in Tally, Excel (Pivot Tables, VLOOKUP), and currently learning SAP FICO and Zen TDS. Known for independently managing branch accounts and ensuring timely vendor payments and ledger accuracy.</p>
     </div>
 
     <div class="section">
-      <h2>Experience</h2>
-      <p><strong>Accounts Executive</strong> – ATO India Ltd (2024 – Present)</p>
+      <h2>Work Experience</h2>
+      <p><strong>ATO India Limited</strong> – Senior Accounts Executive<br><em>June 2024 – Present</em></p>
       <ul>
-        <li>Handled TDS return filing (Form 24Q, 26Q) using Zen TDS software</li>
-        <li>Reconciled ledger accounts and matched challans</li>
-        <li>Managed vendor payments and deduction compliance</li>
+        <li>Filed TDS returns and handled compliance work</li>
+        <li>Maintained branch-level accounting entries and ledgers</li>
+        <li>Performed ITC reconciliation and vendor accounting</li>
+      </ul>
+
+      <p><strong>Ultimo Credit Pvt Ltd</strong> – Accounts Officer<br><em>Dec 2023 – May 2024</em></p>
+      <ul>
+        <li>Maintained voucher entries and cash book</li>
+        <li>Processed loan pledge entries and updated customer records</li>
+        <li>Prepared GST & TDS reports for the Head Office</li>
+      </ul>
+
+      <p><strong>B.G. Distributors Pvt Ltd</strong> – Junior Accountant<br><em>Oct 2022 – Nov 2023</em></p>
+      <ul>
+        <li>Managed GST and TDS return filing and compliance</li>
+        <li>Supervised 5 junior accountants and resolved branch accounting queries</li>
+        <li>Prepared GST input tracker, purchase/sale entries, and filing data</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Education</h2>
-      <p><strong>B.Com in Accounting</strong> – University of Calcutta</p>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Accounting</span>
-        <span>TDS Filing</span>
-        <span>GST Returns</span>
-        <span>Excel</span>
-        <span>Zen TDS</span>
-        <span>Income Tax</span>
-        <span>Reconciliation</span>
-        <span>SAP (Learning)</span>
-      </div>
+      <p><strong>Calcutta University</strong><br>Bachelor of Commerce in Accountancy</p>
     </div>
 
     <div class="section">
       <h2>Certifications</h2>
       <ul>
-        <li>GST & TDS Practical Training – XYZ Institute</li>
-        <li>Learning SAP FICO – Ongoing</li>
+        <li>Tally Professional – Tally Academy</li>
+        <li>GST, TDS & ITR Practical Training – Fin Tax Pro</li>
       </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Tally ERP</span>
+        <span>GST & TDS Compliance</span>
+        <span>Ledger & Bank Reconciliation</span>
+        <span>Financial Statements</span>
+        <span>Vendor Payment Processing</span>
+        <span>MIS Reporting</span>
+        <span>MS Excel (Advanced)</span>
+        <span>Power BI</span>
+        <span>ITR Preparation (Beginner)</span>
+        <span>AI Prompting</span>
+        <span>Zen TDS</span>
+        <span>SAP FICO (Learning)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Languages</h2>
+      <p>English | Bengali | Hindi</p>
     </div>
   </div>
 </body>
