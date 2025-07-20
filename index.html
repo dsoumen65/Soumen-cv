@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,26 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soumen Das - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --primary: #1e88e5;
       --secondary: #f0f8ff;
       --dark: #2c3e50;
       --light: #f9f9f9;
+      --text: #2c3e50;
+      --background: #ffffff;
+    }
+
+    body.dark-mode {
+      --text: #ffffff;
+      --background: #1e1e1e;
+      --secondary: #2c3e50;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--dark);
+      background: var(--background);
+      color: var(--text);
       margin: 0;
       padding: 0;
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: white;
+      background: var(--background);
+      color: var(--text);
       padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -35,8 +47,9 @@
     }
 
     h1 {
-      color: var(--dark);
+      color: var(--text);
       font-size: 32px;
+      text-align: center;
     }
 
     h2 {
@@ -44,6 +57,11 @@
       font-size: 22px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
+    }
+
+    h2 i {
+      margin-right: 10px;
+      color: var(--primary);
     }
 
     .profile-pic {
@@ -82,7 +100,7 @@
     .skills span {
       display: inline-block;
       background: var(--secondary);
-      color: var(--dark);
+      color: var(--text);
       border: 1px solid #cce3f8;
       padding: 6px 12px;
       margin: 4px;
@@ -90,7 +108,7 @@
       font-size: 14px;
     }
 
-    .contact p, .skills p {
+    .contact p {
       margin: 6px 0;
     }
 
@@ -107,6 +125,20 @@
       margin-top: 40px;
     }
 
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
     @media (max-width: 600px) {
       .container {
         padding: 25px 15px;
@@ -120,6 +152,8 @@
 </head>
 <body>
 
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
   <div class="container" style="text-align: center;">
     <img src="soumen-profile.jpg" alt="Soumen Das" class="profile-pic" />
     <h1>Soumen Das</h1>
@@ -130,7 +164,7 @@
   <div class="container">
 
     <div class="section contact">
-      <h2>Contact</h2>
+      <h2><i class="fas fa-address-book"></i> Contact</h2>
       <p>Email: <a href="mailto:dsoumen65@protonmail.com">dsoumen65@protonmail.com</a></p>
       <p>Phone: +91-63427973</p>
       <p>Address: 7B, Gandhinagar, Sodepur, Kolkata - 700114</p>
@@ -138,12 +172,12 @@
     </div>
 
     <div class="section">
-      <h2>Summary</h2>
+      <h2><i class="fas fa-user-pen"></i> Summary</h2>
       <p>Senior Accounts Executive with 3+ years of experience in TDS & GST compliance, financial reporting, and bank reconciliation. Proficient in Tally, Excel (Pivot Tables, VLOOKUP), and currently learning SAP FICO and Zen TDS. Known for independently managing branch accounts and ensuring timely vendor payments and ledger accuracy.</p>
     </div>
 
     <div class="section">
-      <h2>Work Experience</h2>
+      <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
       <p><strong>ATO India Ltd</strong> – Senior Accounts Executive<br><em>June 2024 – Present</em></p>
       <ul>
         <li>Filed TDS returns and handled compliance work</li>
@@ -167,12 +201,12 @@
     </div>
 
     <div class="section">
-      <h2>Education</h2>
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <p><strong>Calcutta University</strong><br>Bachelor of Commerce in Accountancy</p>
     </div>
 
     <div class="section">
-      <h2>Certifications</h2>
+      <h2><i class="fas fa-certificate"></i> Certifications</h2>
       <ul>
         <li>Tally Professional – Tally Academy</li>
         <li>GST, TDS & ITR Practical Training – Fin Tax Pro</li>
@@ -180,7 +214,7 @@
     </div>
 
     <div class="section">
-      <h2>Skills</h2>
+      <h2><i class="fas fa-lightbulb"></i> Skills</h2>
       <div class="skills">
         <span>Tally ERP</span>
         <span>GST & TDS Compliance</span>
@@ -198,7 +232,7 @@
     </div>
 
     <div class="section">
-      <h2>Languages</h2>
+      <h2><i class="fas fa-language"></i> Languages</h2>
       <p>English | Bengali | Hindi</p>
     </div>
   </div>
@@ -207,5 +241,10 @@
     © 2025 Soumen Das. All rights reserved.
   </footer>
 
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
