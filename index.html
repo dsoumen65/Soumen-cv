@@ -16,19 +16,43 @@
       --text: #2c3e50;
       --background: #ffffff;
     }
-    body.dark-mode {
-      --text: #ffffff;
-      --background: #1e1e1e;
-      --secondary: #2c3e50;
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        --text: #ffffff;
+        --background: #1e1e1e;
+        --secondary: #2c3e50;
+      }
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--background);
       color: var(--text);
       margin: 0;
-      padding: 0;
+      padding-top: 60px;
       transition: background 0.3s, color 0.3s;
     }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -38,24 +62,29 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
+
     h1, h2 {
       margin-bottom: 10px;
     }
+
     h1 {
       color: var(--text);
       font-size: 32px;
       text-align: center;
     }
+
     h2 {
       color: var(--primary);
       font-size: 22px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
     }
+
     h2 i {
       margin-right: 10px;
       color: var(--primary);
     }
+
     .profile-pic {
       width: 130px;
       height: 130px;
@@ -64,6 +93,7 @@
       border: 4px solid var(--primary);
       margin-bottom: 12px;
     }
+
     .download-btn {
       display: inline-block;
       margin-top: 12px;
@@ -74,32 +104,40 @@
       font-weight: 600;
       text-decoration: none;
     }
+
     .experience {
       margin-bottom: 30px;
     }
+
     .experience h3 {
       font-size: 18px;
       margin-bottom: 4px;
       color: var(--text);
     }
+
     .experience h3 i {
       margin-right: 6px;
     }
+
     .date {
       font-style: italic;
       color: gray;
       margin-bottom: 10px;
     }
+
     .section {
       margin: 40px 0;
     }
+
     .contact p {
       margin: 6px 0;
     }
+
     a {
       color: var(--primary);
       text-decoration: none;
     }
+
     footer {
       text-align: center;
       font-size: 13px;
@@ -107,23 +145,18 @@
       color: #999;
       margin-top: 40px;
     }
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 1000;
-    }
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
+
+  <nav>
+    <a href="#contact">Contact</a>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certs">Certifications</a>
+    <a href="#langs">Languages</a>
+  </nav>
 
   <div class="container" style="text-align: center;" data-aos="fade-down">
     <img src="soumen-profile.jpg" alt="Soumen Das" class="profile-pic" />
@@ -134,7 +167,7 @@
 
   <div class="container">
 
-    <div class="section contact" data-aos="fade-right">
+    <div class="section contact" id="contact" data-aos="fade-right">
       <h2><i class="fas fa-address-book"></i> Contact</h2>
       <p>Email: <a href="mailto:dsoumen65@protonmail.com">dsoumen65@protonmail.com</a></p>
       <p>Phone: +91 9163427973</p>
@@ -142,12 +175,12 @@
       <p>LinkedIn: <a href="https://www.linkedin.com/in/soumen-das-7638a9266/" target="_blank">linkedin.com/in/soumen-das</a></p>
     </div>
 
-    <div class="section" data-aos="fade-left">
+    <div class="section" id="summary" data-aos="fade-left">
       <h2><i class="fas fa-user-pen"></i> Summary</h2>
       <p>Senior Accounts Executive with 3+ years of experience in TDS & GST compliance, financial reporting, and bank reconciliation. Proficient in Tally, Excel (Pivot Tables, VLOOKUP), and currently learning SAP FICO and Zen TDS. Known for independently managing branch accounts and ensuring timely vendor payments and ledger accuracy.</p>
     </div>
 
-    <div class="section" data-aos="fade-up">
+    <div class="section" id="experience" data-aos="fade-up">
       <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
 
       <div class="experience">
@@ -181,7 +214,7 @@
       </div>
     </div>
 
-    <div class="section" data-aos="fade-up">
+    <div class="section" id="skills" data-aos="fade-up">
       <h2><i class="fas fa-lightbulb"></i> Skills</h2>
       <ul>
         <li>🧾 Tally ERP 9 & Tally Prime</li>
@@ -192,7 +225,7 @@
       </ul>
     </div>
 
-    <div class="section" data-aos="fade-up">
+    <div class="section" id="certs" data-aos="fade-up">
       <h2><i class="fas fa-certificate"></i> Certifications</h2>
       <ul>
         <li>📜 Tally Professional – Tally Academy</li>
@@ -200,7 +233,7 @@
       </ul>
     </div>
 
-    <div class="section" data-aos="fade-up">
+    <div class="section" id="langs" data-aos="fade-up">
       <h2><i class="fas fa-language"></i> Languages</h2>
       <ul>
         <li>🌍 Bengali – Native</li>
